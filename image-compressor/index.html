@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片压缩工具</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>图片压缩工具</h1>
+            <p>简单、快速地压缩您的图片</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <div class="upload-area" id="dropZone">
+                    <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp" multiple hidden>
+                    <img src="img/upload-icon.svg" alt="上传图标" class="upload-icon">
+                    <div class="upload-text">
+                        <p class="upload-title">点击或拖拽图片到这里</p>
+                        <small class="upload-hint">支持 JPG、PNG、WebP 格式，单张最大 20MB，最多 5 张</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="compression-controls">
+                <label for="quality">压缩质量：</label>
+                <input type="range" id="quality" min="1" max="100" value="80">
+                <span id="qualityValue">80%</span>
+            </div>
+
+            <div class="preview-section">
+                <div class="preview-container">
+                    <!-- 预览内容会通过 JavaScript 动态添加 -->
+                </div>
+                <div class="preview-empty-state">
+                    <img src="img/upload-icon.svg" alt="空状态图标">
+                    <p>上传图片后在这里查看压缩效果</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html> 
